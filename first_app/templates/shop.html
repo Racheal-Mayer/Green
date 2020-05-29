@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Slabo+27px&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+<style>
+    .container {
+        font-family: 'Slabo 27px', serif;
+        background:url(https://images.unsplash.com/photo-1528731708534-816fe59f90cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    }
+    th{
+        font-size:30px;
+        line-height: 1;
+    }
+    td{
+        font-size: 20px;
+    }
+    p {
+        text-align: center;
+    }
+
+    .card-img-top {
+        width: 33%;
+        height: 300px;
+        display: inline-block;
+        border-radius: 20px;
+    }
+
+    .card {
+        display: inline-block;
+    }
+
+    .card-body {
+        display: inline-block;
+    }
+
+    h1 {
+        display: inline-block;
+        border-left: 2px solid rgb(73, 93, 100);
+        ;
+        border-bottom: 2px solid rgb(73, 93, 100);
+        ;
+    }
+
+    .space {
+        line-height: 1;
+        display: inline-block;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Abril Fatface', cursive;
+        color: rgb(73, 93, 100);
+        line-height: 1;
+    }
+
+    img:hover {
+        opacity: 0.5;
+    }
+
+    input {
+        display: inline-block;
+    }
+
+    a {
+        color: white;
+    }
+
+    .btn {
+        font-family: 'Slabo 27px', serif;
+        border-radius: 2px;
+        font-size: 20px;
+        width: 100px;
+        margin-left:7%;
+    }
+
+    .btn:hover {
+        background-color: rgb(73, 93, 100);
+        font-family: 'Slabo 27px', serif;
+        border-radius: 2px;
+        font-size: 20px;
+        width: 100px;
+
+    }
+
+    h1 {
+        color: rgb(117, 35, 20);
+    }
+    .hcart{
+        font-size: 40px;
+        margin-left: 4%;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-family: 'Abril Fatface', cursive;
+        color: rgb(73, 93, 100);
+        line-height: 1;
+    }
+
+    .xspace {
+        line-height: 1;
+        border: none;
+    }
+
+    .money {
+        border: none;
+    }
+
+    .cart {
+        margin-left: 42%;
+    }
+
+    .navbar-brand {
+        margin-left: 85%;
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;
+    }
+
+    .frm {
+        width: 33%;
+        text-align: center;
+        display: inline-block;
+        line-height: 1;
+    }
+    .addbtn{
+        border-radius: 20px;
+        color:green;
+    }
+    input:hover{
+        background-color:rgb(73, 93, 100);
+        color:white;
+    }
+    .footer2 {
+            width: 100%;
+            background: hsla(150, 72%, 17%, 0.5);
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+    .header{
+        background: hsla(150, 72%, 17%, 0.5);
+        color:white;
+    }
+    a:hover{
+        color:rgb(73, 93, 100);
+    }
+    .rmv{
+        color:rgb(73, 93, 100);
+    }
+    .rmv:hover{
+        color:white;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+    <a class="navbar-brand" href="/about">
+        <img class="icon"
+            src="https://img.pngio.com/green-leaf-icon-4-256-x-256-making-the-webcom-green-leaf-icon-png-256_256.png"
+            width="30" height="30" alt="">Green Delicateseen</a>
+    {{loggedinuser.fname}} is the logged in user, not you?
+    <a href="/destroy"> Log Out </a><br></div>
+
+   
+
+        <h2>Shop our products of the month!</h2>
+        <p>(available for pickup)</p>
+        </form>
+
+
+        <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            class="card-img-top" alt="cheese">
+
+        <img src="https://images.squarespace-cdn.com/content/v1/5ad395ba36099b72e4432660/1588514131963-WEH7NU4FT8NTUM6Z0G6D/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg"
+            class="card-img-top" alt="meat">
+
+        <img src="https://images.unsplash.com/photo-1565434297390-4665b86fbb3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1158&q=80"
+            class="card-img-top" alt="pie">
+
+
+        <form action="/additem" method="post" class="frm">
+            {% csrf_token %}
+            <h1>Blue Cheeze</h1><br>
+            <input type="hidden" name="item" value="Blue Cheeze"> 10$<br>
+            <input type="hidden" name="itemprice" value="10"><br>
+            <input type="submit" value="Add To Cart" class="addbtn"><br>
+
+
+        </form>
+
+        <form action="/additem" method="post" class="frm">
+            {% csrf_token %}
+            <h1 class="space">Sliced Deli</h1><br>
+            <input type="hidden" name="item" value="Sliced Deli"> 20$ <br>
+            <input type="hidden" name="itemprice" value="20"><br>
+            <input type="submit" value="Add To Cart" class="addbtn">
+
+        </form>
+        <form action="/additem" method="post" class="frm">
+            {% csrf_token %}
+
+            <h1 class="space">Blueberry Pie</h1><br>
+            <input type="hidden" name="item" value="Pie">30$<br>
+            <input type="hidden" name="itemprice" value="30"><br>
+            <input type="submit" value="Add To Cart" class="addbtn">
+        </form>
+
+
+
+
+        <div class="cart">
+            <h3 class="hcart">Your cart: </h3>
+            <table>
+                <tr>
+                    <th>Item:</th>
+                    <th>Price:</th>
+                </tr>
+                {% for item in myitems %}
+                <tr>
+                    <td>{{item.item}}</td>
+                    <td>{{item.itemprice}}</td>
+                    {% if loggedinuser == item.uploader %}
+                    <td><a class="rmv" href="deleteit/{{item.id}}">Remove from Cart</a>
+                        {% endif %}
+                </tr>
+                {% endfor %}
+            </table><br>
+
+            <form action="checkout" method="post">
+                {% csrf_token %}
+                <div class="form">
+                    <input type="submit" class="btn" value="Check Out"> <br>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer2">
+            <i class="fas fa-home mr-3"></i> Grand Rapids, MI
+            <i class="fas fa-envelope mr-3"></i> GreenDelicateseen@outlook.com
+            <i class="fas fa-phone mr-3"></i> 1(586)555-5555
+
+    </div>
+
+</body>
+
+</html>

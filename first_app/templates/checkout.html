@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Abril+Fatface&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+    <title>Checkout</title>
+    <style>
+        .container {
+            background: url(https://images.unsplash.com/photo-1495106245177-55dc6f43e83f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 650px;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .content {
+            text-align: center;
+            display: inline-block;
+            margin-left: 25%;
+            line-height: 1;
+            color: rgb(57, 33, 24);
+            font-size: 20px;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        a {
+            color: white;
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        .items {
+
+            line-height: 1;
+            font-size: 15px;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        .sum {
+            display: inline-block;
+            font-size: 20px;
+            font-family: 'Nanum Myeongjo', serif;
+            color: rgb(57, 33, 24);
+        }
+
+        h1 {
+            text-align: center;
+            line-height: 1;
+            display: inline-block;
+            margin-left: 20%;
+        }
+
+        .links {
+            display: inline-block;
+        }
+
+        .bkg {
+            background: hsla(0, 30%, 87%, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="links">
+            <a href="/"> Home</a>
+            <a href="/destroy"> Log Out </a>
+            <a href="/shop"> Back </a>
+        </div>
+        <h1>Hey, thanks {{loggedinuser.fname}}!</h1>
+        <div class="bkg">
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>{{Product.all.count}} products being prepared:</th>
+                    </tr>
+                    {% for item in Product %}
+                    <tr>
+                        <td>{{item.item}}</td.>
+                            {% endfor %}
+                </table>
+            </div>
+            <div class="sum">
+                Your order will be ready for pick up<br>
+                {{time}} <br>
+                your total is ${{price}} <br></p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

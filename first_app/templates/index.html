@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Bebas+Neue|Shadows+Into+Light|Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <style>
+        * {
+            border: none !important;
+        }
+
+        .jumbotron {
+            background: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Amatic SC', cursive;
+            padding-top: 5px !important;
+            vertical-align: top;
+        }
+
+        .footer {
+            background: url("https://www.superfitfoods.co/wp-content/uploads/2018/02/banner-grid.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100%;
+        }
+
+        .card2 {
+            margin: 20px;
+            width: 300px;
+        }
+
+        .btn {
+            color: green;
+        }
+
+        .btn:hover {
+            color: rgb(231, 179, 93);
+        }
+
+        .display-4 {
+            background: none;
+            color: white;
+            display: inline-block;
+            font-size: 100px;
+            color: green;
+            margin-left: 15%;
+        }
+
+        a {
+            color: green;
+        }
+
+        a:hover {
+            color: rgb(231, 179, 93);
+        }
+
+        .link:hover {
+            color: rgb(231, 179, 93);
+        }
+
+        .hover:hover {
+            color: rgb(231, 179, 93);
+        }
+
+        .hover {
+            color: rgb(231, 179, 93);
+            background: none;
+        }
+
+        .lead {
+            background: none;
+            color: rgb(231, 179, 93);
+            display: inline-block;
+            font-family: "Bebas Neue";
+            font-size: 25px;
+            margin-left: 15%;
+        }
+
+        .center {
+            font-family: "Bebas Neue";
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .navbar-brand {
+            color: green;
+            background: none;
+            margin-top: 0;
+            display: inline-block;
+            margin-left: 80%;
+            font-size: 30px;
+            position: fixed;
+            width: 100%;
+        }
+
+        .recipes {
+            margin-left: 30%;
+        }
+
+        .icon {
+            background: none;
+            margin-top: 0;
+        }
+
+        .bigger {
+            margin-left: 37%;
+            font-size: 40px;
+            /* line-height:20px; */
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 70%;
+            padding: 0;
+            background: none;
+            margin-top: 20px;
+        }
+
+        .input {
+            height: 40px;
+            width: 200px;
+            margin-left: 30%;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+            background: none;
+            color: green;
+            font-size: 35px;
+            border: none;
+            font-family: "Bebas Neue";
+            margin-top: 25px;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background: none;
+            margin-left: 75%;
+            margin-top: 0px;
+            color: green;
+
+        }
+
+        button:hover {
+            color: rgb(231, 179, 93);
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: none;
+            ;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: green;
+            text-decoration: none;
+            display: block;
+            background: none;
+            font-size: 20px;
+            font-family: "Bebas Neue";
+        }
+
+        .link {
+            margin-left: 75%;
+            color: green;
+            background: none;
+            font-size: 30px;
+            font-family: "Bebas Neue";
+            border: none;
+            background: none;
+        }
+
+        .card-img-top {
+            width: 90%;
+            height: 300px;
+        }
+
+        .card-title {
+            font-family: "Bebas Neue";
+            font-size: 40px;
+            line-height: 12px;
+            color: green;
+        }
+
+        .card-text {
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .form {
+            display: inline-block;
+            line-height: 1;
+            font-family: "Bebas Neue";
+            font-size: 20px;
+            color: rgb(62, 72, 43);
+        }
+
+        .login {
+            display: inline-block;
+            line-height: 2.5;
+            font-family: "Bebas Neue";
+            font-size: 20px;
+            color: rgb(62, 72, 43);
+        }
+
+        .footer2 {
+            width: 100%;
+            background: hsla(150, 72%, 17%, 0.5);
+            color: white;
+            text-align: center;
+            display: inline-block;
+        }
+
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background: none;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background: none;
+        }
+
+        .error {
+            background: hsla(0, 30%, 87%, 0.5);
+            color: green;
+            font-size: 20px;
+            font-family: "Bebas Neue";
+        }
+
+        .display-4{
+            font-size: 70px;
+        }
+    </style>
+    <title>Green Delicateseen</title>
+</head>
+
+<body>
+
+
+    <div class="jumbotron">
+        <div class="error">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %} </div>
+        <a class="navbar-brand" href="/about">
+            <img class="icon"
+                src="https://img.pngio.com/green-leaf-icon-4-256-x-256-making-the-webcom-green-leaf-icon-png-256_256.png"
+                width="30" height="30" alt="">Green Delicateseen</a>
+
+
+        <br><br>
+        <h1 class="display-4"> Vegan Deli, Bakery, & Lifestyle.</h1><br>
+        <p class="lead">cruelty-free meat, cheese, baked goods with rich flavors & nutrients. </p>
+
+
+        <a class="link" href="/about">About Us</a>
+        <a class="link" href="/blog">Blog & Recipes</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href="/shop">Shop</a></button>
+            <div class="dropdown-content">
+                <a>Meat</a>
+                <a>Cheese</a>
+                <a>Bakery</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Small Batch Made From Scratch</h5>
+                    <p class="card-text">Information about how we make our meats & cheeses. Information about how we
+                        make our Letterpress tilde air plant before they sold out polaroid unicorn. Thundercats cornhole
+                        keffiyeh, small batch wayfarers pickled gentrify pour-over direct trade viral fingerstache
+                        hoodie selvage kogi edison bulb. Keytar hella.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Family Local Business</h5>
+                    <p class="card-text">Information about how we make our meats & cheeses. Information about how we
+                        make our Letterpress tilde air plant before they sold out polaroid unicorn. Thundercats cornhole
+                        keffiyeh, small batch wayfarers pickled gentrify pour-over direct trade viral fingerstache
+                        hoodie selvage kogi edison bulb. Keytar hella.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <div class="recipes"><br><br>
+
+            <div class="form">
+                <form action="/adduser" method="post">
+                    {% csrf_token %}
+                    <h1> Register </h1>
+                    <label> First Name: </label>
+                    <input type="text" name="fname" id=""><br>
+
+                    <label> Email:</label>
+                    <input type="email" name="email" id=""><br>
+
+                    <label> Password: </label>
+                    <input type="password" name="password" id=""><br>
+
+                    <label> Confirm Password: </label>
+                    <input type="password" name="confirm" id=""><br>
+                    <input type="reset" class="btn">
+                    <input type="submit" class="btn" value="Register"> <br>
+                </form>
+            </div>
+
+            <div class="login">
+
+                <form action="/login" method="post">
+                    {% csrf_token %}
+                    <h1> Login </h1>
+                    <label> User Name: (email) </label>
+                    <input type="text" name="email" id=""><br>
+
+                    <label> Password: </label>
+                    <input type="password" name="password" id=""><br>
+                    <input type="reset" class="btn">
+                    <input type="submit" class="btn" value="Log In"> <br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <img src="https://www.stylist.co.uk/images/app/uploads/2020/02/28171901/monika-grabkowska-phex8h9wqpy-unsplash-1680x1120.jpg?w=1200&h=1&fit=max&auto=format%2Ccompress"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="blog" class="card-title">Tofurkey Sandwich</a>
+                <p class="card-text">When the cheese comes out everybody's happy stilton feta. Cottage cheese queso
+                    manchego say cheese lancashire cream cheese cheese strings airedale. Squirty cheese dolcelatte edam
+                    pepper jack squirty cheese lancashire cheeseburger bocconcini. Red leicester cow cheese. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://static.smuckersrms.com/PhotoImage.ashx?recipeid=7944&w=600&h=600" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <a href="blog" class="card-title">Lemon Blueberry Pie</a>
+                <p class="card-text">Cheese and wine jarlsberg cut the cheese. Chalk and cheese squirty cheese cut the
+                    cheese danish fontina fromage frais cheddar taleggio melted cheese. Croque monsieur cut the cheese
+                    cheesy feet babybel stinking bishop croque monsieur cream cheese fromage.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.swivels-sandwichbar.co.uk/uploads/5nR5HYpV/717x0_750x0/eiliv-sonas-aceron-mAQZ3X_8_l0-unsplash.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="blog" class="card-title">Caprese Sandwich</a>
+                <p class="card-text">Manchego danish fontina cottage cheese. Who moved my cheese mozzarella pepper jack
+                    bocconcini fondue lancashire when the cheese comes out everybody's happy babybel. Fondue macaroni
+                    cheese babybel brie ricotta brie cheese and biscuits blue castello. Cheesecake.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="footer2">
+        <h5">Follow Us</h5><br>
+            <a type="button" class="btn-floating btn-fb">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a type="button" class="btn-floating btn-tw">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a type="button" class="btn-floating btn-gplus">
+                <i class="fab fa-google-plus-g"></i>
+            </a> <br>
+            <i class="fas fa-home mr-3"></i> Grand Rapids, MI
+            <i class="fas fa-envelope mr-3"></i> GreenDelicateseen@outlook.com
+            <i class="fas fa-phone mr-3"></i> 1(586)555-5555
+
+    </div>
+
+
+
+
+    </div>
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+
+
+</body>
+
+</html>

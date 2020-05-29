@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>Blog</title>
+    <style>
+        .container {
+            background: url(https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Abril Fatface', cursive;
+
+        }
+
+        h1 {
+            font-size: 50px;
+            color: rgb(62, 72, 43);
+            line-height: 1;
+        }
+
+        p {
+            font-family: 'Noto Serif', serif;
+            background: hsla(0, 30%, 87%, 0.5);
+        }
+
+        .txtbox {
+            background: hsla(0, 30%, 87%, 0.5);
+            ;
+            color: rgb(62, 72, 43);
+            font-size: 15px;
+            font-family: 'Noto Serif', serif;
+            border-radius: 20px;
+            width: 300px;
+            display: inline-block;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .commentbox {
+            background: hsla(0, 30%, 87%, 0.5);
+            border-radius: 20px;
+            color: rgb(62, 72, 43);
+            font-size: 15px;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .links {
+            margin-left: 80%;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .messages {
+            background: hsla(0, 30%, 87%, 0.5);
+            border-radius: 20px;
+            width: 300px;
+
+        }
+
+        .comment {
+            background: hsla(128, 82%, 17%, .1);
+            border-radius: 20px;
+        }
+
+        .shared {
+            display: inline-block;
+            margin-left: 5%;
+            width: 20%;
+        }
+
+        .contribute {
+            display: inline-block;
+            margin-left: 400px;
+            width: 30%;
+        }
+
+        .info {
+            border-bottom: 2px solid rgb(62, 72, 43);
+            border-left: 2px solid rgb(62, 72, 43);
+        }
+
+        a {
+            color: rgb(62, 72, 43);
+            font-size: 25px;
+        }
+
+        a:hover {
+            color: rgb(246, 188, 101);
+        }
+
+        .bkg {
+            background: hsla(0, 30%, 87%, 0.5);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="links"><a href="/"> Home </a>
+            <a href="/shop"> Shop </a> <br>
+            <a href="/destroy"> Log Out </a> <br>
+            <a href="http://supperinthesuburbs.com/2019/01/06/the-ultimate-vegan-club-sandwich/"> Tofurkey Sandwich</a>
+            <a href="https://www.thespruceeats.com/vegan-lemon-blueberry-pie-recipe-3376687"> Lemon Blueberry Pie</a>
+            <a href="https://www.connoisseurusveg.com/vegan-caprese-sandwiches/"> Caprese Sandwich</a><br>
+            <a href="https://theminimalistvegan.com/high-quality-vegan-blogs/"> More Vegan Blogs</a>
+
+
+        </div>
+        <div class="shared">
+            <h1> Shared Recipes: </h1>
+
+            {% for onemessage in post %}
+            <p class="info"> {{onemessage.register.fname}} {{onemessage.register.created_at}}
+            <p class="messages"> {{onemessage.message}} </p>
+            {% if loggedinuser == onemessage.register %}
+            <a href="delete/{{onemessage.id}}">Delete Recipe</a>
+            {% endif %}
+
+            {% for comment in onemessage.comments.all %}
+            <p class="comment"> <br>{{comment.comment}}</p>
+            {% if loggedinuser == comment.register %}
+            <a href="deletecm/{{comment.id}}">Delete Comment</a>
+            {% endif %}
+            {% endfor %}
+
+            <form action="/post_comment/{{onemessage.id}}" method="post">
+                {% csrf_token %}
+                <input type="text" name="comment" class="commentbox" id=""> <br>
+                <input type="submit" class="btn" value="POST COMMENT"> <br>
+            </form>
+            {% endfor %}
+
+        </div>
+
+        <div class="contribute">
+            <h1 class="bkg">Tell us your favorite recipe {{loggedinuser.fname}}</h1>
+
+
+            <form action="/post_message" method="post">
+                {% csrf_token %}
+                <textarea name="message" rows="20" cols="50" class="txtbox"></textarea> <br>
+                <input type="submit" class="btn" value="POST RECIPE"> <br>
+                <input type="hidden" name="created_at">
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
